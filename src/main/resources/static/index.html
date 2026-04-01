@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting App</title>
+</head>
+<body>
+    <h1 id="message"></h1>
+
+    <script>
+        fetch('/greet')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('message').innerText = data;
+            });
+    </script>
+</body>
+</html>
