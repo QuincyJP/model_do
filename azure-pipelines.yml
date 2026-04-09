@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: test
+pool: self-hosted-pool
 
 steps:
 - task: Maven@3
@@ -18,4 +18,4 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    goals: 'compile'
